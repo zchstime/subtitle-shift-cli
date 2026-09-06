@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "subtitle-shift-cli"
+version = "0.1.0"
+description = "Shift, stretch, and validate SRT subtitle timing without re-encoding video."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "zchstime" }]
+keywords = ['subtitles', 'srt', 'video', 'creator-tools', 'local-first', 'automation']
+[project.scripts]
+subtitle-shift = "subtitle_shift_cli.__main__:main"
+[tool.setuptools.packages.find]
+where = ["src"]
