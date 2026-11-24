@@ -32,6 +32,16 @@ subtitle-shift examples/demo.srt --shift 1.5 --output shifted.srt
 
 Use the synthetic [`examples/`](examples/) data for a safe first run. Run `subtitle-shift --help` for the complete command reference.
 
+Basic WebVTT cues can be shifted directly or converted between SRT and WebVTT.
+Use a `.vtt` output name for WebVTT. Cue identifiers and settings survive VTT-to-VTT
+processing. NOTE, STYLE and REGION blocks are outside the basic cue format and produce
+an error before any output is written.
+
+```bash
+subtitle-shift examples/demo.srt --shift 1.5 -o shifted.vtt
+subtitle-shift shifted.vtt --shift -1.5 -o restored.srt
+```
+
 ## Design
 
 ```text
